@@ -116,7 +116,7 @@ export const ACTIONS = {
         computation = prev * current
         break
       case "÷":
-        computation = prev / current
+        computation = prev % current
         break
     }
   
@@ -165,7 +165,7 @@ export const ACTIONS = {
       <DigitButton digit={"."} dispatch={dispatch} />
       <DigitButton digit={"0"} dispatch={dispatch} />
       <button className="span-two" onClick={() => dispatch({ type: ACTIONS.EVALUATE })}> = </button>
-     
+     <div style={{color:"white",fontSize:"0.8rem"}}>Made By Melika</div>
     </div>
   )
 }
