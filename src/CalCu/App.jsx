@@ -115,8 +115,8 @@ export const ACTIONS = {
       case "*":
         computation = prev * current
         break
-      case "÷":
-        computation = prev % current
+      case "/":
+        computation = prev / current
         break
     }
   
@@ -149,7 +149,7 @@ export const ACTIONS = {
       </div>
       <button onClick={()=>dispatch({type:ACTIONS.CLEAR})} className="span-two"> AC</button>
       <button onClick={()=>dispatch({type:ACTIONS.DELETE_DIGIT})} >DEL</button>
-      <OperationButton operation={"%"} dispatch={dispatch} />
+      <OperationButton operation={"/"} dispatch={dispatch} />
       <DigitButton digit={"1"} dispatch={dispatch} />
       <DigitButton digit={"2"} dispatch={dispatch} />
       <DigitButton digit={"3"} dispatch={dispatch} />
